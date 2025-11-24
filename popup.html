@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>YouTube Redirect</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #1c1c1c;
+        --accent: #ff0000; /* YouTube red */
+        --on-color: #2ecc71; /* green */
+        --off-color: #e74c3c; /* red */
+        --shadow: rgba(0, 0, 0, 0.05);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #1c1c1c;
+          --text: #f2f2f2;
+          --accent: #ff4d4d;
+          --shadow: rgba(255, 255, 255, 0.08);
+        }
+      }
+
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 14px;
+        color: var(--text);
+        background: var(--bg);
+        margin: 0;
+        padding: 16px;
+        width: 240px;
+      }
+
+      .card {
+        border-radius: 12px;
+        padding: 16px;
+        box-shadow: 0 2px 10px var(--shadow);
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      h2 {
+        font-size: 16px;
+        margin: 0;
+        color: var(--accent);
+        text-align: center;
+      }
+
+      .toggle-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .label-text {
+        font-weight: 500;
+      }
+
+      /* Modern toggle switch */
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 44px;
+        height: 24px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--off-color);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        border-radius: 24px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 3px;
+        bottom: 3px;
+        background-color: white;
+        transition: transform 0.3s ease;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: var(--on-color);
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(20px);
+      }
+
+      #status {
+        text-align: center;
+        font-weight: 600;
+        border-radius: 6px;
+        padding: 6px;
+        color: white;
+        transition: background-color 0.3s ease;
+      }
+
+      #status.on {
+        background-color: var(--on-color);
+      }
+
+      #status.off {
+        background-color: var(--off-color);
+      }
+
+      footer {
+        font-size: 12px;
+        text-align: center;
+        color: #777;
+        margin-top: 6px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        footer {
+          color: #aaa;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>YouTube Redirect</h2>
+      <div class="toggle-row">
+        <span class="label-text">Enable Redirect</span>
+        <label class="switch">
+          <input type="checkbox" id="toggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div id="status" class="off">Redirect is OFF</div>
+    </div>
+    <footer>v1.4 – Safe Local Extension</footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
