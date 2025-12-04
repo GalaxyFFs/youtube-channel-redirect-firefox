@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "YouTube Channel Redirect",
-  "version": "1.4",
+  "version": "1.5",
   "description": "Firefox extension that redirects you from YouTube channel homepage to videos. Safe and minimal permissions.",
   "author": "GalaxyFFs",
   "homepage_url": "https://github.com/GalaxyFFs/youtube-channel-redirect-firefox",
@@ -42,7 +42,7 @@
   
   "browser_specific_settings": {
     "gecko": {
-      "id": "youtube-redirect-firefox",
+      "id": "youtube-redirect-firefox@github.GalaxyFFs",
       "strict_min_version": "91.0",
       "data_collection_permissions": {
         "required": ["none"]
