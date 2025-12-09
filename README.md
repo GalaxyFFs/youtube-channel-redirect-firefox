@@ -20,12 +20,6 @@ When you visit a YouTube channel like `youtube.com/@channelname`, this extension
 - **Privacy-focused** - No data collection, no tracking, no external requests
 - **Open source** - Full transparency, review the code yourself
 
-## 📸 Preview
-
-![Extension Popup](images/popup.png)
-
-*Simple toggle to enable/disable*
-
 ## 📦 Installation
 
 ### From Firefox Add-ons (Recommended)
