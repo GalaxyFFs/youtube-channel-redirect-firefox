@@ -22,7 +22,7 @@ When you visit a YouTube channel like `youtube.com/@channelname`, this extension
 
 ## 📸 Preview
 
-![Extension Popup](screenshots/popup.png)
+![Extension Popup](images/popup.png)
 *Simple toggle to enable/disable*
 
 ## 📦 Installation
