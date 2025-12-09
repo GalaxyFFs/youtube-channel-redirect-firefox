@@ -4,7 +4,7 @@ A lightweight Firefox extension that automatically redirects YouTube channel hom
 
 [![Firefox Add-on](https://img.shields.io/badge/Firefox-Install-orange?logo=firefox)](link-to-addon)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL-blue.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/GalaxyFFs/youtube-channel-redirect-firefox/relases)](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
+[![GitHub release](https://img.shields.io/github/v/release/GalaxyFFs/youtube-channel-redirect-firefox)](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
 
 ## 🎯 What it does
 
@@ -105,7 +105,7 @@ cd youtube-redirect
 
 ## 🐛 Bug Reports
 
-Found a bug? Please [open an issue](https://github.com/yourusername/youtube-redirect/issues) with:
+Found a bug? Please [open an issue](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/issues) with:
 - Firefox version
 - Extension version
 - Steps to reproduce
@@ -113,11 +113,11 @@ Found a bug? Please [open an issue](https://github.com/yourusername/youtube-redi
 
 ## 📝 Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) or [Releases](https://github.com/yourusername/youtube-redirect/releases) for version history.
+See [CHANGELOG.md](CHANGELOG.md) or [Releases](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases) for version history.
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the GPL v3 License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
