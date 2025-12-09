@@ -4,8 +4,7 @@ A lightweight Firefox extension that automatically redirects YouTube channel hom
 
 [![Firefox Add-on](https://img.shields.io/badge/Firefox-Install-orange?logo=firefox)]()
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/github/downloads/GalaxyFFs/youtube-channel-redirect-firefox/total
-)](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
+[![GitHub release](https://img.shields.io/github/downloads/GalaxyFFs/youtube-channel-redirect-firefox/total)](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
 
 ## 🎯 What it does
 
