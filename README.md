@@ -1,95 +1,137 @@
 # YouTube Channel Redirect
 
-> Skip the extra click - go straight to the videos!
+A lightweight Firefox extension that automatically redirects YouTube channel home pages to their videos tab.
 
-A Firefox extension that automatically redirects YouTube channel home pages to their videos tab.
+[![Firefox Add-on](https://img.shields.io/badge/Firefox-Install-orange?logo=firefox)](link-to-addon)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/yGalaxyFFs/youtube-channel-redirect-firefox)](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
 
-## 📸 Preview
+## 🎯 What it does
 
-![Extension Popup](screenshots/popup.png)
-*Simple toggle to enable/disable*
-
-## 🎯 The Problem
-
-When you visit a YouTube channel, you land on the "Home" tab. Most of the time, you want to see their **videos**, not featured content.
-
-**Without this extension:**
-1. Visit `youtube.com/@channelname`
-2. Wait for page to load
-3. Click "Videos" tab
-4. Wait again
-
-**With this extension:**
-1. Visit `youtube.com/@channelname`
-2. ✨ Instantly at `/videos`
-
-## ⚡ Quick Start
-
-### Install from Firefox Add-ons
-[![Get the Add-on](https://blog.mozilla.org/addons/files/2020/04/get-the-addon-fx-apr-2020.svg)](link-to-addon)
-
-### Or install manually
-1. Download the latest `.xpi` from [Releases](https://github.com/yourusername/youtube-redirect/releases)
-2. Drag and drop into Firefox
+When you visit a YouTube channel like `youtube.com/@channelname`, this extension automatically redirects you to `youtube.com/@channelname/videos` so you can see their content immediately without clicking the Videos tab.
 
 ## ✨ Features
 
-| Feature | Description |
-|---------|-------------|
-| 🚀 **Auto-redirect** | Instant redirect to videos tab |
-| 🎚️ **Toggle control** | Easy on/off switch in popup |
-| 🔒 **Privacy first** | Zero data collection |
-| ⚡ **Lightweight** | Minimal resource usage |
-| 🌐 **Smart detection** | Works with all navigation types |
+- **Automatic redirects** - Saves you a click on every channel visit
+- **Toggle on/off** - Easy enable/disable via extension popup
+- **Smart detection** - Works with both direct navigation and YouTube's SPA
+- **Lightweight** - Minimal performance impact
+- **Privacy-focused** - No data collection, no tracking, no external requests
+- **Open source** - Full transparency, review the code yourself
 
-## 🛡️ Privacy & Permissions
+## 📦 Installation
 
-**What we DON'T do:**
-- ❌ Track your browsing
-- ❌ Collect any data
-- ❌ Make external requests
-- ❌ Show ads
+### From Firefox Add-ons (Recommended)
+Install from [Firefox Add-ons](link-once-published) *(Coming soon)*
 
-**Permissions explained:**
-- `storage` - Save your on/off preference
-- `webNavigation` - Detect channel visits
-- `tabs` - Perform redirects
-- `youtube.com` - Only works on YouTube
+### From GitHub Releases
+1. Download the latest `.xpi` file from [Releases](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
+2. Open Firefox and navigate to `about:addons`
+3. Click the gear icon ⚙️ → "Install Add-on From File..."
+4. Select the downloaded `.xpi` file
 
-## 🔧 How to use
+### From Source
+```bash
+git clone https://github.com/GalaxyFFs/youtube-channel-redirect-firefox.git
+cd youtube-redirect
+```
 
-1. Install the extension
-2. Visit any YouTube channel
-3. Enjoy automatic redirects!
+Then in Firefox:
+1. Navigate to `about:debugging#/runtime/this-firefox`
+2. Click "Load Temporary Add-on..."
+3. Select any file in the extension directory (e.g., `manifest.json`)
 
-**Want to disable it?**  
-Click the extension icon and toggle it off.
+## 🎮 Usage
+
+1. **Install the extension** (see above)
+2. **Visit any YouTube channel** - The redirect happens automatically!
+3. **Toggle on/off** - Click the extension icon in your toolbar to enable/disable
+
+That's it! The extension works silently in the background.
+
+## 🔧 How it works
+
+The extension uses two methods to catch navigation:
+
+1. **Full page loads** - Intercepts via `webNavigation.onCommitted` API
+2. **YouTube SPA navigation** - Listens to YouTube's `yt-navigate-finish` events and History API changes
+
+When it detects you're on a channel root page (`/@channelname`), it safely redirects to `/@channelname/videos`.
+
+## 🛡️ Privacy & Security
+
+- ✅ **No data collection** - We don't collect, store, or transmit any data
+- ✅ **No tracking** - No analytics, no telemetry
+- ✅ **No external requests** - All processing happens locally
+- ✅ **Minimal permissions** - Only requests what's necessary:
+  - `storage` - To remember your enable/disable preference
+  - `webNavigation` - To detect when you visit a channel
+  - `tabs` - To perform the redirect
+  - `https://www.youtube.com/*` - Only works on YouTube
+
+## 🏗️ Technical Details
+
+**Built with:**
+- Manifest V2 (Firefox compatible)
+- Vanilla JavaScript (no dependencies)
+- Chrome Storage API for settings
+
+**Files:**
+- `manifest.json` - Extension configuration
+- `background.js` - Handles full page navigation
+- `content.js` - Handles SPA navigation within YouTube
+- `popup.html/js` - Toggle UI
 
 ## 🤝 Contributing
 
-Found a bug? Have an idea? 
+Contributions are welcome! Here's how:
 
-- 🐛 [Report bugs](https://github.com/yourusername/youtube-redirect/issues)
-- 💡 [Request features](https://github.com/yourusername/youtube-redirect/issues)
-- 🔀 [Submit pull requests](https://github.com/yourusername/youtube-redirect/pulls)
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-## 📊 Stats
+### Development Setup
 
-- **Size:** < 20 KB
-- **Performance impact:** Negligible
-- **Compatibility:** Firefox 140+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/youtube-redirect.git
+cd youtube-redirect
+
+# Load in Firefox for testing
+# Go to about:debugging → Load Temporary Add-on → Select manifest.json
+```
+
+## 🐛 Bug Reports
+
+Found a bug? Please [open an issue](https://github.com/yourusername/youtube-redirect/issues) with:
+- Firefox version
+- Extension version
+- Steps to reproduce
+- Expected vs actual behavior
+
+## 📝 Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) or [Releases](https://github.com/yourusername/youtube-redirect/releases) for version history.
 
 ## 📄 License
 
-MIT License - See [LICENSE](LICENSE)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## ⭐ Show your support
+## 🙏 Acknowledgments
 
-If this saves you time:
-- Star this repo ⭐
-- Share with friends 🔗
-- Leave a review on Firefox Add-ons 📝
+- Inspired by the need to save one click per channel visit
+- Thanks to all contributors and users
+
+## ⭐ Support
+
+If you find this extension useful, please:
+- ⭐ Star this repository
+- 🐛 Report bugs
+- 💡 Suggest features
+- 🔀 Contribute code
 
 ---
 
-**Made by developers, for developers** 🚀
+Made with ❤️ for a better YouTube browsing experience
