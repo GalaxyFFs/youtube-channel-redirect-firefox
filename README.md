@@ -4,7 +4,7 @@ A lightweight Firefox extension that automatically redirects YouTube channel hom
 
 [![Firefox Add-on](https://img.shields.io/badge/Firefox-Install-orange?logo=firefox)](link-to-addon)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL-blue.svg)](LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/GalaxyFFs/youtube-channel-redirect-firefox)](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
+[![GitHub release](https://img.shields.io/github/v/release/GalaxyFFs/youtube-channel-redirect-firefox/relases)](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
 
 ## 🎯 What it does
 
@@ -22,7 +22,7 @@ When you visit a YouTube channel like `youtube.com/@channelname`, this extension
 ## 📦 Installation
 
 ### From Firefox Add-ons (Recommended)
-Install from [Firefox Add-ons](link-once-published) *(Coming soon)*
+Install from [Firefox Add-ons]() *(Coming soon)*
 
 ### From GitHub Releases
 1. Download the latest `.xpi` file from [Releases](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
