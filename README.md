@@ -2,7 +2,6 @@
 
 A lightweight Firefox extension that automatically redirects YouTube channel home pages to their videos tab.
 
-[![Firefox Add-on](https://img.shields.io/badge/Firefox-Install-orange?logo=firefox)]()
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE)
 [![GitHub release](https://img.shields.io/badge/Download-Release-green)](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
 
@@ -20,9 +19,6 @@ When you visit a YouTube channel like `youtube.com/@channelname`, this extension
 - **Open source** - Full transparency, review the code yourself
 
 ## 📦 Installation
-
-### From Firefox Add-ons (Recommended)
-Install from [Firefox Add-ons]() *(Coming soon)*
 
 ### From GitHub Releases
 1. Download the latest `.xpi` file from [Releases](https://github.com/GalaxyFFs/youtube-channel-redirect-firefox/releases)
