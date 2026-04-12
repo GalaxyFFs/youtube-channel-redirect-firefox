@@ -29,7 +29,7 @@ When you visit a YouTube channel like `youtube.com/@channelname`, this extension
 ### From Source
 ```bash
 git clone https://github.com/GalaxyFFs/youtube-channel-redirect-firefox.git
-cd youtube-redirect
+cd youtube-channel-redirect-firefox
 ```
 
 Then in Firefox:
@@ -92,8 +92,8 @@ Contributions are welcome! Here's how:
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/youtube-redirect.git
-cd youtube-redirect
+git clone https://github.com/yourusername/youtube-channel-redirect-firefox.git
+cd youtube-channel-redirect-firefox
 
 # Load in Firefox for testing
 # Go to about:debugging → Load Temporary Add-on → Select manifest.json
