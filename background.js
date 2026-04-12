@@ -22,7 +22,7 @@ function isChannelRootUrl(urlString) {
     return segments.length === 2 && 
            segments[1].startsWith("@") && 
            segments[1].length > 1 &&
-           /^@[\w-]+$/.test(segments[1]); // Additional validation: only alphanumeric, underscore, hyphen
+           /^@[\w.-]+$/.test(segments[1]); // Additional validation: only alphanumeric, dot, underscore, hyphen
   } catch (e) {
     console.error("URL validation error:", e);
     return false;
@@ -45,7 +45,7 @@ browserAPI.webNavigation.onCommitted.addListener((details) => {
         const nameSegment = u.pathname.replace(/\/+$/, "").split("/")[1];
         
         // Validate channel name format
-        if (!/^@[\w-]+$/.test(nameSegment)) {
+        if (!/^@[\w.-]+$/.test(nameSegment)) {
           console.warn("Invalid channel name format:", nameSegment);
           return;
         }

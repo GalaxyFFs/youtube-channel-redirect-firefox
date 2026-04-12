@@ -15,7 +15,7 @@ const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
     return parts.length === 2 && 
            parts[1].startsWith("@") && 
            parts[1].length > 1 &&
-           /^@[\w-]+$/.test(parts[1]);
+           /^@[\w.-]+$/.test(parts[1]);
   }
 
   function safeRedirectToVideos(urlString) {
@@ -28,7 +28,7 @@ const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
       const parts = u.pathname.replace(/\/+$/, "").split("/");
       const channel = parts[1];
       
-      if (!(parts.length === 2 && /^@[\w-]+$/.test(channel))) return;
+      if (!(parts.length === 2 && /^@[\w.-]+$/.test(channel))) return;
 
       isRedirecting = true;
       
