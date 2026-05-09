@@ -4,7 +4,11 @@ const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
 
 browserAPI.runtime.onInstalled.addListener(() => {
   try {
-    browserAPI.storage.local.set({ redirectEnabled: true });
+    browserAPI.storage.local.get("redirectEnabled", ({ redirectEnabled }) => {
+      if (typeof redirectEnabled === "undefined") {
+        browserAPI.storage.local.set({ redirectEnabled: true });
+      }
+    });
   } catch (e) {
     console.error("Storage set error:", e);
   }
@@ -43,13 +47,7 @@ browserAPI.webNavigation.onCommitted.addListener((details) => {
       try {
         const u = new URL(url);
         const nameSegment = u.pathname.replace(/\/+$/, "").split("/")[1];
-        
-        // Validate channel name format
-        if (!/^@[\w.-]+$/.test(nameSegment)) {
-          console.warn("Invalid channel name format:", nameSegment);
-          return;
-        }
-        
+
         u.pathname = `/${nameSegment}/videos`;
         u.hash = "";
         u.search = "";
